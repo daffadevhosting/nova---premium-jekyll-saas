@@ -1,0 +1,74 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#3b82f6">
+
+<!-- PWA Apple Support -->
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="{{ site.title }}">
+<link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+
+<!-- Favicon -->
+<link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
+<link rel="alternate icon" type="image/png" href="/assets/icons/favicon-32x32.png">
+
+<!-- Web Manifest -->
+<link rel="manifest" href="/manifest.webmanifest">
+
+<!-- Stylesheet -->
+<link rel="stylesheet" href="/assets/css/main.css">
+
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Jekyll SEO Tag (Automatic Titles, Descriptions, OpenGraph, Canonical URLs) -->
+{% seo %}
+
+<!-- Dark Mode Inline Initializer (Stops Dark/Light Flash) -->
+<script>
+  (function () {
+    const savedTheme = localStorage.getItem('theme_mode') || 'system';
+    const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    if (savedTheme === 'dark' || (savedTheme === 'system' && systemPrefersDark)) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  })();
+</script>
+
+<!-- Structured Data JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "{{ site.title }}",
+  "description": "{{ site.description }}",
+  "operatingSystem": "All",
+  "applicationCategory": "BusinessApplication",
+  "offers": {
+    "@type": "Offer",
+    "price": "0.00",
+    "priceCurrency": "USD"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ site.title }}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ site.url }}/assets/icons/favicon.svg"
+    }
+  }
+}
+</script>
+
+<!-- Scripts (Deferred for performance) -->
+<script src="/assets/js/theme.js" defer></script>
+<script src="/assets/js/navigation.js" defer></script>
+<script src="/assets/js/pricing.js" defer></script>
+<script src="/assets/js/faq.js" defer></script>
+<script src="/assets/js/announcement.js" defer></script>
+<script src="/assets/js/main.js" defer></script>

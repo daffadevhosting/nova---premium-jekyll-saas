@@ -1,0 +1,55 @@
+---
+layout: default
+---
+
+<article class="py-20 md:py-28">
+  <div class="max-w-3xl mx-auto px-6">
+    <div class="mb-8">
+      <a href="/blog/" class="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 dark:text-blue-400 hover:underline mb-6">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+        </svg>
+        Back to Blog
+      </a>
+
+      <div class="flex flex-wrap items-center gap-3 text-sm text-slate-500 dark:text-slate-400 mb-4">
+        <time datetime="{{ page.date | date_to_xmlschema }}">
+          {{ page.date | date: "%B %d, %Y" }}
+        </time>
+        <span>•</span>
+        <span>By {{ page.author | default: site.author.name }}</span>
+        {% if page.categories %}
+          <span>•</span>
+          <span class="bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 px-2.5 py-0.5 rounded-full text-xs font-medium">
+            {{ page.categories | first }}
+          </span>
+        {% endif %}
+      </div>
+
+      <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white mb-6">
+        {{ page.title }}
+      </h1>
+    </div>
+
+    {% if page.image %}
+      <div class="mb-10 rounded-xl overflow-hidden shadow-lg border border-slate-200 dark:border-slate-800">
+        <img src="{{ page.image }}" alt="{{ page.title }}" class="w-full h-auto object-cover max-h-[400px]">
+      </div>
+    {% endif %}
+
+    <div class="prose prose-slate dark:prose-invert max-w-none prose-headings:font-bold prose-a:text-blue-600 dark:prose-a:text-blue-400">
+      {{ content }}
+    </div>
+
+    <!-- Tags if any -->
+    {% if page.tags %}
+      <div class="mt-12 pt-8 border-t border-slate-200 dark:border-slate-800 flex flex-wrap gap-2">
+        {% for tag in page.tags %}
+          <span class="bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 px-3 py-1 rounded-md text-xs font-semibold">
+            #{{ tag }}
+          </span>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</article>

@@ -1,0 +1,6 @@
+{
+  "name": "NOVA - Premium Jekyll SaaS Template",
+  "description": "A highly customizable, production-ready, conversion-oriented premium Jekyll SaaS landing page template with modern visual dashboard, dark mode, sitemap, PWA-ready capabilities, and clean SEO tags.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

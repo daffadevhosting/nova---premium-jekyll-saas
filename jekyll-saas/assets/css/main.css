@@ -1,0 +1,65 @@
+/* 
+  NOVA Premium SaaS Template CSS Entry Point
+  Tailwind CSS v3 Directives or Pre-Compiled imports.
+  This file handles the main typography, CSS custom properties, 
+  and layout animations.
+*/
+
+@import "tailwindcss";
+
+/* Custom Theme System Base Overrides */
+:root {
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+/* Accessible focus styling */
+*:focus-visible {
+  outline: 2px solid #2563eb !important;
+  outline-offset: 4px !important;
+}
+
+/* Subtlest hovering elevations */
+.hover-lift {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px -10px rgba(0,0,0,0.08);
+}
+
+/* Reduced Motion Settings */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-delay: 0s !important;
+    animation-duration: 0s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0s !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom styling for FAQ accordion transition height */
+.faq-panel {
+  max-height: 0;
+  transition: max-height 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Interactive dashboard custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.2);
+  border-radius: 999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(148, 163, 184, 0.4);
+}

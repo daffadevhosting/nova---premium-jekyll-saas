@@ -1,0 +1,47 @@
+# Jekyll Configuration for NOVA SaaS Template
+title: "NOVA"
+tagline: "Build smarter. Ship faster."
+description: "The modern workspace for teams that want to turn ideas into products faster. Highly customizable, responsive, and SEO-optimized."
+url: "https://nova-saas-template.netlify.app" # Replace with your production domain
+baseurl: ""
+
+# Author details
+author:
+  name: "NOVA Team"
+  email: "hello@nova-saas.com"
+  twitter: "nova_saas"
+  github: "nova-saas"
+
+# Theme settings
+theme_mode: "system" # Options: light, dark, system
+accent_color: "#3b82f6" # Accent color used throughout (Blue 500)
+
+# Analytics (Optional)
+analytics:
+  enabled: false
+  google_analytics_id: ""
+
+# Currency symbol
+pricing:
+  currency: "$"
+
+# Build Settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - LICENSE
+  - manifest.webmanifest
+  - sw.js

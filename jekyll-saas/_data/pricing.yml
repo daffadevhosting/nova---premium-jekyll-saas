@@ -1,0 +1,49 @@
+currency: "$"
+
+plans:
+  - id: "starter"
+    name: "Starter"
+    description: "Essential workflows for small collaborative teams."
+    price_monthly: 9
+    price_yearly: 7
+    cta_text: "Get Started Free"
+    cta_url: "/signup/"
+    popular: false
+    features:
+      - "Up to 3 active projects"
+      - "1,000 monthly automation runs"
+      - "Basic analytics dashboard"
+      - "Shared collaborative workspace"
+      - "Standard email support"
+
+  - id: "pro"
+    name: "Pro"
+    description: "Advanced automation engines for growing power users."
+    price_monthly: 29
+    price_yearly: 22
+    cta_text: "Start Free Pro Trial"
+    cta_url: "/signup/"
+    popular: true
+    features:
+      - "Unlimited active projects"
+      - "50,000 monthly automation runs"
+      - "Smart predictive forecasting"
+      - "Custom webhooks and triggers"
+      - "Priority 24/7 client support"
+      - "Custom domain white-labeling"
+
+  - id: "business"
+    name: "Business"
+    description: "Enterprise scale pipelines for heavy duty compliance."
+    price_monthly: 79
+    price_yearly: 59
+    cta_text: "Contact Sales"
+    cta_url: "/contact/"
+    popular: false
+    features:
+      - "Everything in Pro included"
+      - "Unlimited automation runs"
+      - "Military AES-256 data encryption"
+      - "Dedicated account representative"
+      - "Single Sign-On (SSO) SAML"
+      - "99.99% uptime SLA guarantee"

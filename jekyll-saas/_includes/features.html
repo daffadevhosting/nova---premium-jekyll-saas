@@ -1,0 +1,77 @@
+<section id="features" class="py-20 lg:py-28 bg-white dark:bg-slate-950 transition-colors duration-200">
+  <div class="max-w-7xl mx-auto px-6">
+    
+    <!-- Section Heading -->
+    <div class="text-center max-w-3xl mx-auto mb-16 md:mb-24">
+      <h2 class="text-xs font-extrabold tracking-widest text-blue-600 dark:text-blue-400 uppercase mb-3">
+        Features Set
+      </h2>
+      <p class="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
+        Engineered for speed.<br>
+        Optimized for scaling.
+      </p>
+      <p class="text-base md:text-lg text-slate-600 dark:text-slate-400 mt-4 leading-relaxed">
+        Everything you need to integrate, automate, and orchestrate modern web processes at global enterprise speeds.
+      </p>
+    </div>
+
+    <!-- Features Card Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {% for feature in site.data.features %}
+        <div class="group bg-slate-50 dark:bg-slate-900 p-8 rounded-2xl border border-slate-100 dark:border-slate-800 hover:border-blue-500/20 dark:hover:border-blue-500/30 hover:bg-white dark:hover:bg-slate-900/60 shadow-sm transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <!-- Icon Container -->
+            <div class="w-12 h-12 rounded-xl bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+              {% if feature.icon == "zap" %}
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              {% elsif feature.icon == "users" %}
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z"></path>
+                </svg>
+              {% elsif feature.icon == "bar-chart-2" %}
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                </svg>
+              {% elsif feature.icon == "cpu" %}
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path>
+                </svg>
+              {% elsif feature.icon == "link" %}
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"></path>
+                </svg>
+              {% elsif feature.icon == "shield" %}
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                </svg>
+              {% else %}
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              {% endif %}
+            </div>
+
+            <!-- Title & Description -->
+            <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-2 tracking-tight">
+              {{ feature.title }}
+            </h3>
+            <p class="text-sm md:text-base text-slate-600 dark:text-slate-400 leading-relaxed mb-6">
+              {{ feature.description }}
+            </p>
+          </div>
+
+          <!-- Card CTA -->
+          <a href="{{ feature.link }}" class="inline-flex items-center gap-1.5 text-sm font-bold text-blue-600 dark:text-blue-400 group-hover:text-blue-700 dark:group-hover:text-blue-300">
+            Learn more
+            <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"></path>
+            </svg>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>

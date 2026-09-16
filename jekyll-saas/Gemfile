@@ -1,0 +1,19 @@
+source "https://rubygems.org"
+
+# Hello! This is the Gemfile for running NOVA Jekyll SaaS template.
+# Run 'bundle install' to install dependencies.
+# Run 'bundle exec jekyll serve' to launch development server.
+
+gem "jekyll", "~> 4.3.3"
+
+group :jekyll_plugins do
+  gem "jekyll-feed", "~> 0.17"
+  gem "jekyll-seo-tag", "~> 2.8"
+  gem "jekyll-sitemap", "~> 1.4"
+end
+
+# We use standard clean Jekyll themes or we run as self-contained.
+# NOVA is designed to run self-contained without standard theme overrides.
+# This makes customization of layouts and HTML incredibly simple.
+webrick_gem = "webrick"
+gem webrick_gem if Gem::Version.new(RUBY_VERSION) >= Gem::Version.new("3.0.0")

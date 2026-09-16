@@ -1,0 +1,17 @@
+- name: "Sarah Jenkins"
+  role: "Lead Frontend Engineer"
+  company: "Linear Devs (Demo User)"
+  quote: "NOVA completely rebuilt how we track task timelines. The Tailwind setup is remarkably clean, and customizing the Liquid templates took literally five minutes."
+  avatar: "SJ"
+
+- name: "Alex Rivera"
+  role: "VP of Product"
+  company: "Vercel Co (Demo User)"
+  quote: "This Jekyll template feels like a premium SaaS product rather than a quick wrapper. The dark mode is perfectly executed with no light-flash on load."
+  avatar: "AR"
+
+- name: "Marcus Chen"
+  role: "Founder & CTO"
+  company: "Stripe Studios (Demo User)"
+  quote: "Our marketing landing page conversion jumped 40% after launching with NOVA. The extreme speed, inline SVGs, and zero render-blocking JS did the trick."
+  avatar: "MC"

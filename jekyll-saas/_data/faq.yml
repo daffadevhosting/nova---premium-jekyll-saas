@@ -1,0 +1,23 @@
+- question: "How does the 14-day free trial work?"
+  answer: "You can sign up for any premium plan (Pro or Business) with a simple single click. We do not require a credit card upfront. You get full unlocked access to all features for 14 days, and can choose to upgrade or cancel anytime."
+
+- question: "Can I host this Jekyll template on GitHub Pages?"
+  answer: "Absolutely! This template is fully optimized for GitHub Pages, Netlify, Cloudflare Pages, or any standard static site provider. The codebase is highly standard, clean, and requires absolutely no complex server-side environments."
+
+- question: "Is there a limit on how many team members I can invite?"
+  answer: "No, we believe collaboration shouldn't be gated. You can invite your entire product development team, stakeholders, and clients into your workspace on all plans. We only charge for high-volume automation runs."
+
+- question: "How do I hook up my own custom domain name?"
+  answer: "Under your project Settings, simply enter your custom domain (e.g. workspace.yourbrand.com). We will provide CNAME records for your DNS setup and automatically provision a secure, free Let's Encrypt SSL certificate."
+
+- question: "Is my business data secure with NOVA?"
+  answer: "Yes, security is our primary focus. All persistent data is encrypted both in transit (using TLS 1.3) and at rest (using AES-256). We maintain regular SOC 2 audits and enforce strict role-based workspace permissions."
+
+- question: "What happens if I exceed my monthly automation limits?"
+  answer: "If you exceed your plan's volume limit, we will never abruptly freeze your active production pipelines. We will send polite warning emails with options to purchase affordable add-on packs or scale up naturally."
+
+- question: "Can I cancel or change my plan anytime?"
+  answer: "Of course. There are absolutely no locked contracts, long-term retainers, or hidden exit fees. You can upgrade, downgrade, or cancel your active subscription plan directly with a single click in your settings."
+
+- question: "Do you offer discounts for educational institutes?"
+  answer: "Yes! We support the development community. We offer 50% lifetime discounts for registered schools, universities, non-profit institutions, open-source projects, and student hackers. Simply contact support."

@@ -1,0 +1,84 @@
+<section id="pricing" class="py-20 lg:py-28 bg-slate-50 dark:bg-slate-900 transition-colors duration-200">
+  <div class="max-w-7xl mx-auto px-6">
+    
+    <!-- Header -->
+    <div class="text-center max-w-3xl mx-auto mb-16 md:mb-20">
+      <h2 class="text-xs font-bold tracking-widest text-blue-600 dark:text-blue-400 uppercase mb-3">
+        Pricing
+      </h2>
+      <h3 class="text-3xl md:text-5xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">
+        Transparent billing, custom scaled plans.
+      </h3>
+      <p class="text-base md:text-lg text-slate-600 dark:text-slate-400 mt-4">
+        Choose a flexible package built specifically around your organization's weekly execution volume. No long-term commitments or hidden setup fees.
+      </p>
+
+      <!-- Monthly/Yearly Billing Toggle Switch (Fully Accessible) -->
+      <div class="mt-10 flex items-center justify-center gap-4">
+        <span class="text-xs md:text-sm font-semibold text-slate-500 dark:text-slate-400">Monthly billing</span>
+        <button id="billing-toggle" aria-checked="false" role="switch" aria-label="Toggle between monthly and yearly billing" class="relative inline-flex h-7 w-12 shrink-0 cursor-pointer rounded-full border-2 border-transparent bg-slate-200 dark:bg-slate-800 transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2">
+          <span id="billing-toggle-knob" class="pointer-events-none inline-block h-6 w-6 transform rounded-full bg-white shadow-md ring-0 transition-transform duration-200 translate-x-0"></span>
+        </button>
+        <span class="text-xs md:text-sm font-semibold text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
+          Yearly billing
+          <span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-extrabold bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 uppercase">Save ~25%</span>
+        </span>
+      </div>
+    </div>
+
+    <!-- Pricing Cards Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch max-w-6xl mx-auto">
+      {% for plan in site.data.pricing.plans %}
+        <div class="bg-white dark:bg-slate-950 rounded-2xl p-8 relative flex flex-col justify-between hover:scale-[1.01] transition-transform duration-200 border {% if plan.popular %}border-blue-500 shadow-xl shadow-blue-500/5 dark:shadow-none{% else %}border-slate-200/60 dark:border-slate-800 shadow-sm{% endif %}">
+          
+          {% if plan.popular %}
+            <span class="absolute top-0 right-8 -translate-y-1/2 bg-blue-600 text-white font-extrabold text-[10px] tracking-wider uppercase px-3 py-1 rounded-full shadow-sm">
+              Most Popular
+            </span>
+          {% endif %}
+
+          <div>
+            <!-- Header elements -->
+            <div class="mb-6">
+              <h4 class="text-xl font-bold text-slate-900 dark:text-white mb-2">{{ plan.name }}</h4>
+              <p class="text-xs text-slate-500 dark:text-slate-400 leading-relaxed">{{ plan.description }}</p>
+            </div>
+
+            <!-- Price representation -->
+            <div class="mb-8 flex items-baseline">
+              <span class="text-3xl font-extrabold text-slate-900 dark:text-white">{{ site.data.pricing.currency }}</span>
+              <span class="price-val text-5xl font-black text-slate-900 dark:text-white" 
+                    data-monthly="{{ plan.price_monthly }}" 
+                    data-yearly="{{ plan.price_yearly }}">
+                {{ plan.price_monthly }}
+              </span>
+              <span class="text-slate-500 dark:text-slate-400 text-sm font-semibold ml-2 billing-period">/ month</span>
+            </div>
+
+            <!-- Features checklist divider -->
+            <hr class="border-slate-100 dark:border-slate-800 my-6">
+
+            <!-- Plan Features List -->
+            <ul class="flex flex-col gap-4 mb-8">
+              {% for feature in plan.features %}
+                <li class="flex items-start gap-3 text-xs md:text-sm text-slate-600 dark:text-slate-300">
+                  <svg class="w-4 h-4 shrink-0 text-blue-500 mt-0.5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"></path>
+                  </svg>
+                  <span>{{ feature }}</span>
+                </li>
+              {% endfor %}
+            </ul>
+          </div>
+
+          <!-- Plan CTA Action -->
+          <a href="{{ plan.cta_url }}" class="w-full inline-flex items-center justify-center font-bold text-sm px-6 py-3.5 rounded-xl border transition-colors duration-150 outline-none focus:ring-2 focus:ring-blue-600 {% if plan.popular %}bg-blue-600 hover:bg-blue-700 text-white border-transparent shadow-md shadow-blue-500/10{% else %}bg-slate-50 dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-200 border-slate-200/60 dark:border-slate-800{% endif %}">
+            {{ plan.cta_text }}
+          </a>
+
+        </div>
+      {% endfor %}
+    </div>
+
+  </div>
+</section>

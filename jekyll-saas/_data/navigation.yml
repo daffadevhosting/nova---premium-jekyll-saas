@@ -1,0 +1,51 @@
+# Main Navbar Links
+header:
+  - title: "Features"
+    url: "#features"
+  - title: "Integrations"
+    url: "#integrations"
+  - title: "Pricing"
+    url: "#pricing"
+  - title: "FAQ"
+    url: "#faq"
+
+# Footer Navigation Links
+footer:
+  product:
+    title: "Product"
+    links:
+      - title: "Features"
+        url: "#features"
+      - title: "Pricing"
+        url: "#pricing"
+      - title: "Integrations"
+        url: "#integrations"
+      - title: "Changelog"
+        url: "/changelog/"
+  company:
+    title: "Company"
+    links:
+      - title: "About"
+        url: "/about/"
+      - title: "Contact"
+        url: "/contact/"
+      - title: "Careers"
+        url: "/careers/"
+  resources:
+    title: "Resources"
+    links:
+      - title: "Documentation"
+        url: "/docs/"
+      - title: "Blog"
+        url: "/blog/"
+      - title: "Help Center"
+        url: "/help/"
+  legal:
+    title: "Legal"
+    links:
+      - title: "Privacy"
+        url: "/privacy/"
+      - title: "Terms"
+        url: "/terms/"
+      - title: "Cookies"
+        url: "/cookies/"

@@ -1,0 +1,122 @@
+<section class="relative py-20 lg:py-28 overflow-hidden bg-slate-50 dark:bg-slate-900 transition-colors duration-200">
+  <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+    
+    <!-- Hero Text Content -->
+    <div class="lg:col-span-5 text-center lg:text-left flex flex-col justify-center">
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-[1.1] mb-6">
+        Build smarter.<br class="hidden sm:inline">
+        <span class="text-blue-600 dark:text-blue-400">Ship faster.</span>
+      </h1>
+      
+      <p class="text-lg md:text-xl text-slate-600 dark:text-slate-400 font-medium mb-10 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+        {{ site.description }}
+      </p>
+
+      <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+        <a href="/signup/" class="w-full sm:w-auto inline-flex items-center justify-center font-bold text-base bg-blue-600 text-white hover:bg-blue-700 transition duration-150 px-8 py-4 rounded-xl shadow-lg shadow-blue-500/25 outline-none focus:ring-4 focus:ring-blue-600/30 whitespace-nowrap">
+          Start Building Free
+        </a>
+        <a href="#showcase" class="w-full sm:w-auto inline-flex items-center justify-center font-bold text-base bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:bg-slate-50 dark:hover:bg-slate-700 transition duration-150 border border-slate-200 dark:border-slate-800 px-8 py-4 rounded-xl outline-none focus:ring-4 focus:ring-blue-600/10 whitespace-nowrap">
+          See How It Works
+        </a>
+      </div>
+    </div>
+
+    <!-- Hero Visual SaaS Dashboard Representation (Pure HTML/CSS - Premium Aesthetic) -->
+    <div class="lg:col-span-7 relative w-full flex justify-center">
+      <div class="absolute -inset-1 rounded-2xl bg-gradient-to-tr from-blue-600/10 to-indigo-600/10 blur-3xl -z-10"></div>
+      
+      <!-- Frame Container representing a rich SaaS Web Application Mockup -->
+      <div class="w-full max-w-[640px] rounded-2xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-950 shadow-2xl overflow-hidden aspect-[4/3] flex flex-col transition duration-300 transform hover:-translate-y-1">
+        <!-- Top window bar -->
+        <div class="h-10 border-b border-slate-100 dark:border-slate-800/80 bg-slate-50 dark:bg-slate-900/60 flex items-center px-4 justify-between shrink-0">
+          <div class="flex gap-1.5">
+            <span class="w-3 h-3 rounded-full bg-red-400"></span>
+            <span class="w-3 h-3 rounded-full bg-yellow-400"></span>
+            <span class="w-3 h-3 rounded-full bg-green-400"></span>
+          </div>
+          <div class="text-[11px] font-semibold text-slate-400 dark:text-slate-500 tracking-wider">
+            APP.NOVA.IO/DASHBOARD
+          </div>
+          <div class="w-12"></div>
+        </div>
+
+        <!-- Dashboard Content Grid -->
+        <div class="grow flex bg-slate-50/50 dark:bg-slate-950/20 overflow-hidden">
+          <!-- Sidebar -->
+          <div class="w-16 md:w-44 border-r border-slate-100 dark:border-slate-800/80 p-3 shrink-0 flex flex-col gap-5 bg-white dark:bg-slate-950">
+            <!-- Sidebar item -->
+            <div class="h-6 rounded bg-blue-50 dark:bg-blue-950/40 flex items-center px-2 gap-2 text-blue-600 dark:text-blue-400">
+              <span class="w-3.5 h-3.5 rounded bg-blue-500 shrink-0"></span>
+              <span class="hidden md:inline text-[10px] font-bold tracking-tight">Overview</span>
+            </div>
+            <!-- Mock sidebar items -->
+            {% for i in (1..4) %}
+              <div class="h-6 rounded hover:bg-slate-50 dark:hover:bg-slate-900/50 flex items-center px-2 gap-2 text-slate-400 dark:text-slate-500 transition">
+                <span class="w-3.5 h-3.5 rounded-full border-2 border-slate-200 dark:border-slate-800 shrink-0"></span>
+                <span class="hidden md:inline text-[10px] font-bold tracking-tight">Project {{ i }}</span>
+              </div>
+            {% endfor %}
+          </div>
+
+          <!-- Main Stats Container -->
+          <div class="grow p-4 md:p-6 flex flex-col gap-5 overflow-y-auto">
+            <!-- Top Metric row -->
+            <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+              <div class="bg-white dark:bg-slate-900 p-3 rounded-xl border border-slate-100 dark:border-slate-800/80 shadow-sm">
+                <div class="text-[10px] font-extrabold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">Weekly Active</div>
+                <div class="text-lg md:text-xl font-extrabold text-slate-800 dark:text-white leading-none">12,480</div>
+                <div class="text-[9px] text-green-500 font-bold mt-1.5 flex items-center gap-0.5">
+                  <span>↑ 12%</span> <span class="text-slate-400 font-normal">vs last week</span>
+                </div>
+              </div>
+              <div class="bg-white dark:bg-slate-900 p-3 rounded-xl border border-slate-100 dark:border-slate-800/80 shadow-sm">
+                <div class="text-[10px] font-extrabold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">Automations</div>
+                <div class="text-lg md:text-xl font-extrabold text-slate-800 dark:text-white leading-none">94.3%</div>
+                <div class="text-[9px] text-green-500 font-bold mt-1.5 flex items-center gap-0.5">
+                  <span>↑ 4.2%</span> <span class="text-slate-400 font-normal">efficiency</span>
+                </div>
+              </div>
+              <div class="hidden md:block bg-white dark:bg-slate-900 p-3 rounded-xl border border-slate-100 dark:border-slate-800/80 shadow-sm">
+                <div class="text-[10px] font-extrabold text-slate-400 dark:text-slate-500 uppercase tracking-wider mb-1">Server Latency</div>
+                <div class="text-lg md:text-xl font-extrabold text-slate-800 dark:text-white leading-none">14ms</div>
+                <div class="text-[9px] text-blue-500 font-bold mt-1.5 flex items-center gap-0.5">
+                  <span>• Optimal</span> <span class="text-slate-400 font-normal">region US</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Dynamic Graph Visual using pure CSS flex & SVGs -->
+            <div class="grow bg-white dark:bg-slate-900 p-4 rounded-xl border border-slate-100 dark:border-slate-800/80 shadow-sm flex flex-col justify-between">
+              <div class="flex justify-between items-center mb-3">
+                <span class="text-[11px] font-extrabold text-slate-700 dark:text-slate-300">Automations Pipeline Volume</span>
+                <span class="text-[9px] font-bold bg-slate-100 dark:bg-slate-800 px-2 py-0.5 rounded text-slate-500">Live</span>
+              </div>
+              
+              <!-- SVG Wave Line graph -->
+              <div class="grow relative h-20 w-full flex items-end">
+                <svg viewBox="0 0 400 100" class="absolute inset-0 w-full h-full text-blue-500 stroke-current fill-none overflow-visible" stroke-width="3" stroke-linecap="round">
+                  <path d="M 0,80 Q 40,20 80,60 T 160,30 T 240,70 T 320,20 T 400,40" />
+                  <!-- Fill Area -->
+                  <path d="M 0,80 Q 40,20 80,60 T 160,30 T 240,70 T 320,20 T 400,40 L 400,100 L 0,100 Z" class="opacity-[0.06] fill-blue-500" stroke-width="0" />
+                </svg>
+                <div class="absolute bottom-0 inset-x-0 border-b border-slate-100 dark:border-slate-800"></div>
+              </div>
+
+              <!-- Graph x-axis labels -->
+              <div class="flex justify-between text-[9px] font-semibold text-slate-400 tracking-wider mt-2 px-1">
+                <span>MON</span>
+                <span>TUE</span>
+                <span>WED</span>
+                <span>THU</span>
+                <span>FRI</span>
+                <span>SAT</span>
+                <span>SUN</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
